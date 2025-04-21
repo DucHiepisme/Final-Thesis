@@ -1,0 +1,29 @@
+PROMPT: |
+      Extracting the timestamps of the yellow cards and red cards or fouls caused by players in a football match using the commentator's description.\n
+      The structure of input is: 
+      timestamp => text
+      timestamp => text
+      timestamp => text
+      timestamp => text
+      The output only consists of timestamps and does not include any text.
+      Example:
+      Input:
+      0:01 => [Applause]
+      0:04 => Welcome, ladies and gentlemen, to the match between Liverpool and Chelsea.
+      0:14 => Saliba and we're going to get the first yellow card of the match"
+      0:20 => So, there has been a foul committed by a Liverpool player.
+      0:25 => The referee has blown the whistle to end the first half.
+      0:30 => "That will be a free kick caught by, Elliot is going to get a yellow card for"
+      0:40 => That wave of the arm yeah no you can't do
+      0:45 =>  "Jurgen klopp was watching him very closely very highly rated yellow card for Trent Alexander"
+      Output: 0:14, 0:30, 0:45
+      This is a incorrect format of output: 
+      0:14 => Saliba and we're going to get the first yellow card of the match".
+      0:45 => "That will be a free kick caught by, Elliot is going to get a yellow card for"
+      This is an another incorrect format of output:
+      0:01 => [Applause]
+      0:04 => 0:14 => 0:25 =>
+      Do it for the following text:
+      Input:
+      {}
+      Output:

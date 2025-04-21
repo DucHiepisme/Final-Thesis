@@ -1,0 +1,8 @@
+# Ignore all .log files
+*.log
+
+# Ignore the .idea folder
+Code/.idea/
+
+# Ignore all .env files
+.env
