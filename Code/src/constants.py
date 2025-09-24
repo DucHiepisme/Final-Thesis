@@ -11,7 +11,6 @@ LEAGUE = "league"
 LINKS = "links"
 CACHE_DIR = "cache"
 
-OPEN_AI_API_KEY = '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'
 
 RESULT_DIR = "result"
 SHORT_OUTPUT_DIR = "short"
