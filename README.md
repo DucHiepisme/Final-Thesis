@@ -39,29 +39,9 @@ Final Thesis/
 │   ├── result/                 # Output results
 │   │   ├── frame/              # Extracted frames
 │   │   ├── static/             # Static analysis results
-│   │   ├── video/              # Processed videos
-│   │   └── video_true/         # Ground truth videos
 │   └── fault/                  # Error analysis
 │       ├── fn.txt              # False negatives
 │       └── fp.txt              # False positives
-├── Data/                       # Training and test datasets
-│   ├── Dataset/                # Main dataset
-│   │   ├── Focus Cam/          # Focus camera footage
-│   │   ├── train/              # Training data
-│   │   ├── val/                # Validation data
-│   │   └── test/               # Test data
-│   ├── Action Spotting/        # Action spotting datasets
-│   │   ├── germany_bundesliga/
-│   │   ├── italy_serie-a/
-│   │   └── spain_laliga/
-│   ├── Event Match/            # Match event data
-│   │   ├── england_epl/
-│   │   ├── europe_uefa-champions-league/
-│   │   ├── france_ligue-1/
-│   │   ├── germany_bundesliga/
-│   │   ├── italy_serie-a/
-│   │   └── spain_laliga/
-│   └── MVF/                    # Multi-view foul dataset
 └── Documentation/              # Research papers and presentations
     ├── *.pdf                   # Research papers
     └── *.png                   # Diagrams and illustrations
@@ -99,71 +79,6 @@ pip install scikit-learn
 pip install PyYAML
 ```
 
-### Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/DucHiepisme/Final-Thesis.git
-cd Final-Thesis
-```
-
-2. Create a virtual environment (recommended):
-```bash
-python -m venv thesis_env
-# On Windows:
-thesis_env\Scripts\activate
-# On macOS/Linux:
-source thesis_env/bin/activate
-```
-
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-4. Set up environment variables:
-   - Create a `.env` file or set OpenAI API key if using AI features
-   - Configure paths in `src/constants.py` if needed
-
-5. Download the pre-trained model (if not included):
-   - The trained ViT model should be placed in `Code/cache/vit_custom_augmented_focuscam/`
-
-## 🎮 Usage
-
-### Basic Usage
-
-Run the main pipeline:
-```bash
-cd Code
-python main.py
-```
-
-### Frame Extraction
-
-Extract frames from videos:
-```python
-from src.preprocess.frame_collector import FrameCollector
-
-collector = FrameCollector()
-collector.get_frame(input_dir="path/to/videos", output_path="path/to/output")
-```
-
-### Custom Configuration
-
-Modify `config/prompt.yml` to adjust:
-- Frame extraction intervals
-- Model parameters
-- Output directories
-- Processing settings
-
-## 📊 Model Performance
-
-The system uses a custom-augmented Vision Transformer (ViT) model trained on focus camera footage:
-
-- **Architecture**: Vision Transformer (ViT)
-- **Training Data**: Multi-league football datasets
-- **Augmentation**: Custom augmentation for sports scenarios
-- **Performance Metrics**: Available in `cache/vit_custom_augmented_focuscam/eval_results.json`
 
 ## 🔬 Research Context
 
@@ -186,14 +101,6 @@ The system generates several types of output:
 - **Statistical Reports**: Performance metrics and analysis
 - **Visualization**: Attention maps and detection confidence
 
-## 🤝 Contributing
-
-This is a thesis project, but suggestions and improvements are welcome:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
 
 ## 📝 License
 
