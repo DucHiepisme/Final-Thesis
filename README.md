@@ -22,7 +22,7 @@ This project implements an automated system for detecting fouls in football (soc
     }
     Result: YES
 
-
+![Sample Output Image](Code/sample_output.png)
 
 
 ## 🏗️ System Architecture
