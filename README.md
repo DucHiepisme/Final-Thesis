@@ -6,7 +6,7 @@ This project implements an automated system for detecting fouls in football (soc
 
 ## 🧪 Example
 
-**Input:** [Play Video](sample_input.mp4)
+**Input:** [Play Video](Code/result/truth/WZ9WQURYBTY5962-5967.mp4)
     
 **Output:**
     
@@ -21,7 +21,6 @@ This project implements an automated system for detecting fouls in football (soc
       "99:25": "tugs his shirt happy to give away the"
     }
     Result: YES
-![Sample Output Image](sample_output.png)
 
 
 
