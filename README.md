@@ -4,6 +4,28 @@
 
 This project implements an automated system for detecting fouls in football (soccer) videos using computer vision and machine learning techniques. The system analyzes video footage to identify potential foul incidents, making it valuable for sports analysis, referee assistance, and match review processes.
 
+## 🧪 Example
+
+**Input:** [Play Video](sample_input.mp4)
+    
+**Output:**
+    
+    ```json
+    {
+      "99:07": "the month as well after the",
+      "99:08": "international break of course now here's",
+      "99:10": "Cole Palmer trying to get away from Cody",
+      "99:12": "he really got hold of him there that'll",
+      "99:13": "be a",
+      "99:23": "controlled it spun Cody and Cody just",
+      "99:25": "tugs his shirt happy to give away the"
+    }
+    Result: YES
+![Sample Output Image](sample_output.png)
+
+
+
+
 ## 🏗️ System Architecture
 
 The project consists of several key components:
